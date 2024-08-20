@@ -1,1 +1,1 @@
-# Superior-Digit-Recognition-Leveraging-Data-Augmentation-and-Convolutional-Neural-Networks
+# Superior-Digit-Recognition-Leveraging-Data-Augmentation-and-Convolutional
