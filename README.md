@@ -1,59 +1,45 @@
-Project Overview
-This project implements a Convolutional Neural Network (CNN) to classify handwritten digits from the MNIST dataset. 
-The dataset consists of grayscale images of digits (0-9) that have been normalized and reshaped for CNN input. 
-The model is enhanced using data augmentation techniques to improve generalization and accuracy. 
-The final model is evaluated on the test data and provides predictions on unseen samples.
+Overview
+This project took a CNN on the MNIST dataset for classifying the handwritten digits. The digit images are given as from 0 to 9, which are normalized 
+and reshaped to match in size to be input required by CNNs. In data augmentation, a method can be applied to this to make it enhance the model so as 
+to get an improved accuracy when generalized. The test model would be run to check it on test data, producing results in terms of predictions about the unseen samples.
 
-Key Features
-CNN Architecture: A sequential model with convolutional layers, max-pooling, dropout, and dense layers to classify the digits.
-Data Augmentation: Applied using ImageDataGenerator to improve model generalization through transformations like rotation, zoom, width/height shifts.
-Training & Validation: The model is trained on the MNIST training set and validated on the test set over 10 epochs.
-Accuracy & Loss: Plots of training and validation accuracy and loss are generated to visualize model performance.
-Prediction: The model predicts individual test samples, displaying the true and predicted labels.
+Important Features
+CNN Architecture: A sequential model that has convolutional layers, max-pooling, dropout, and dense layers, which can classify the digits.
+Data Augmentation: The use of ImageDataGenerator enhances the generalization ability of the model with different kinds of transformations such as rotation, zoom, width/height shifts.
+Training & Validation: The model will train on the MNIST training set and validated with the test set for 10 epochs.
+Accuracy & Loss: It would help in visualizing the model performance by representing the plots of the training accuracy and loss along with the validation accuracy and loss.
+The model classifies the individual test samples. True and predicted labels
 
 Dataset
-The project uses the MNIST dataset, which consists of:
-60,000 training images
-10,000 testing images
-The images are grayscale and have a size of 28x28 pixels. Each image represents a digit (0-9).
-
-Model Architecture
-The CNN architecture consists of the following layers:
-Conv2D layer with 32 filters, followed by a MaxPooling2D layer
-Conv2D layer with 64 filters, followed by another MaxPooling2D layer
+MNIST Dataset is used for the project, which contains:
+train images = 60,000
+test images = 10,000
+GrayScale images of size 28x28 pixels, a digit from 0 through 9 in every image.
 Conv2D layer with 64 filters
-Flatten layer to convert the 2D output to 1D
+Flatten layer to take the 2D output to 1-D
 Dense layer with 64 units and ReLU activation
-Dropout layer with 0.5 dropout rate for regularization
-Dense layer with 10 units (for 10 output classes) and softmax activation for classification.
-
-Requirements
+Dropout layer with a dropout rate of 0.5 for regularization
+Dense layer with 10 units, followed by softmax activation because this is a multi-class classification problem.
+  
+Dependencies
 Python 3.x
 TensorFlow 2.x
 NumPy
 Matplotlib
+  
+You can install the dependencies by using the command:
+pip install tensorflow numpy matplotlib 
 
-You can install the dependencies using:
-pip install tensorflow numpy matplotlib
-
-How to Run
-Clone the repository:
+Run
 git clone <repository_url>
-cd <repository_directory>
+cd  <repository_directory>
+ Running the Python script:
+ python mnist_cnn.py
 
-Run the Python script:
-python mnist_cnn.py
-
-The script will:
-Load and preprocess the MNIST dataset
-Train the CNN model with data augmentation
-Plot training/validation accuracy and loss
-Display predictions on sample test images
-
-Output
-Accuracy: The model achieves a test accuracy of approximately 99.25%.
-Sample Prediction: A sample test image along with its predicted label is displayed using Matplotlib.
-
-Results Visualization
-During training, a plot of the training and validation accuracy across epochs will be generated. 
-After training, you will see a sample image from the test set with its true and predicted labels.
+The script will :
+load and pre-process the MNIST dataset
+train the CNN model with data augmentation 
+plot training/validation accuracy and loss
+display predictions over sample test images
+At the time of training, a plot of the training and validation accuracy across epochs will be generated.
+At the end of training you will see a sample test image along with its ground truth and predicted labels.
